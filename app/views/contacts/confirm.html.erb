@@ -6,19 +6,16 @@
 
       <!-- `f.hidden_field`を使用して、リクエストパラメータに値を設定できるようにしています。 -->
       <%= f.hidden_field :name %>
-      <%= f.hidden_field :email %>
       <%= f.hidden_field :content %>
 
       <!-- @contact.nameと@contact.emailと@contact.contentとすることで、表示用の値を画面に出力しています。 -->
       <p>おなまえ:<%= @contact.name %></p>
-      <p>メール:<%= @contact.email %></p>
       <p>本文:<%= @contact.content %></p>
       <%= f.submit "登録する",class: 'btn btn-primary btn-block' %>
     <% end %>
 
-    <%= form_for(@contact, url: root_path, method: 'get') do |f| %>
+    <%= form_for(@contact) do |f| %>
       <%= f.hidden_field :name %>
-      <%= f.hidden_field :email %>
       <%= f.hidden_field :content %>
       <%= f.submit "もどる",name: 'back',class: 'btn btn-default btn-block' %>
     <% end %>

@@ -112,7 +112,6 @@ header ul:after {
 }
 
 .about {
-  
   background-color: white;
   color: #333;
   padding: 80px;
@@ -120,8 +119,8 @@ header ul:after {
 
 .function {
   background-color: #e9e9e9;
-  padding: 80px;
-  padding-bottom: 185px;
+  padding: 50px;
+  padding-bottom: 180px;
 }
 
 .page-top-btn {
@@ -148,19 +147,10 @@ header ul:after {
   }
 }
 
-/*
-.function-images {
-  width: 100%;
-  display: table;
-  margin-top: 60px;
-  table-layout: fixed;
+.flash {
+  color: white;
+  padding-top: 10px;
 }
-
-.function-image {
-  display: table-cell;
-  width: 100%;
-}
-*/
 
 html {
   position: relative;
@@ -169,6 +159,7 @@ html {
 
 body {
   text-align: center;
+  width: 100%;
   background-color: #e9e9e9;
 }
 
@@ -182,6 +173,12 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
+.flash {
+  color: white;
+  padding-top: 10px;
+}
+
 
 // Place all the styles related to the Top controller here.
 // They will automatically be included in application.css.

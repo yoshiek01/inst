@@ -1,26 +1,6 @@
-<!--
-<html lang="ja">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Achieve</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
- 
-
-    <header>
-      <ul>
-        <li><a href="#">Achieve</a></li>
-        <li><a href="#">トップページ</a></li>
-        <li><a href="#">お問い合わせ</a></li>
-        <li><a href="#">ブログ</a></li>
-      </ul>
-    </header>
--->
-    
     <section class="main-header">
+        <p class="flash"><%= notice %><%= alert %></p>
         <img src="<%= asset_path "achieve.png" %>">
      </section>
  
@@ -36,15 +16,13 @@
       <p>
         Acheiveを一言で表すと、タスク管理アプリです。<br>
         チームメンバーが、今どのようなタスクを行っているかリアルタイムで把握することができます。
-     
       </p>
-     </section> 
-  
+
     <section class="function container-fluid">
         <div class="row">
             <h1>Function</h1>
             <div class="function-images">
-                <div class= "col-md-3 col-sm-6">
+                <div class= "col-md-3 col-sm-6">     
                     <div class="function-image">
                         <img src="<%= asset_path "key.png" %>">
                         <p>ログイン機能</p>
@@ -52,7 +30,7 @@
                 </div>
      
                 <div class="col-md-3 col-sm-6">
-                    <div class="function-image">
+                     <div class="function-image">
                         <img src="<%= asset_path "mails.png" %>">
                         <p>メール送信機能</p>
                     </div>
