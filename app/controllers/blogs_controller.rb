@@ -16,7 +16,9 @@ class BlogsController < ApplicationController
  
  def create
   @blog =  Blog.new(blogs_params)
- 
+  @blog.user_id = current_user.id
+  #ブログ保存時に現在のユーザIDを保存
+
    if @blog.save
     redirect_to blogs_path ,notice: "ブログを作成しました！"
    
