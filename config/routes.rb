@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     collection do
       post :confirm
     end
-
   end
 
   resources :contacts,only: [:new, :create]do
@@ -13,14 +12,15 @@ Rails.application.routes.draw do
     end
   end
 
-#  if Rails.env.development?
-#    mount LetterOpenerWeb::Engine, at: "/letter_opener"
-#  end
 
   root 'top#index'
   #ルートディレクトリはtopコントローラのindexアクション
-
 end
+
+   if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
