@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   root 'top#index'
-  #ルートディレクトリはtopコントローラのindexアクション
+  #ルートディレクトリはtopコントローラのindexアクショ
 
   if Rails.env.development?
    mount LetterOpenerWeb::Engine, at: "/letter_opener"
