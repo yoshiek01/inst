@@ -8,7 +8,7 @@ class NoticeMailer < ApplicationMailer
   def sendmail_blog(blog)
     @blog = blog
 
-    mail to: "yoshie-k@nttpc.co.jp",
+    mail to: "e7352@g.maizuru-ct.ac.jp",
       subject: '【Achieve】ブログが投稿されました'
   end
 end
