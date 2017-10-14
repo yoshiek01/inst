@@ -10,16 +10,17 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contacts_params)
-    
+
     if @contact.save
       #入力画面に戻って"お問合せありがとうございました！"とメッセージを表示します
       redirect_to root_path, notice: "お問い合わせありがとうございました！"
-    else 
+      NoticeMailer.sendmail_contact(@contact).deliver
+    else
       #入力フォームを再描画
       render 'root'
     end
   end
-  
+
   def confirm
     @contact = Contact.new(contacts_params)
     render :new if @contact.invalid?
