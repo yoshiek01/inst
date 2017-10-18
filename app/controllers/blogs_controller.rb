@@ -2,7 +2,8 @@ class BlogsController < ApplicationController
   before_action :authenticate_user!
 
  def index
-  @blogs = Blog.all
+     @blogs = Blog.all
+     raise
  end
 
  def new
@@ -32,7 +33,6 @@ class BlogsController < ApplicationController
 
   def update
    @blog = Blog.find(params[:id])
-
 
    if @blog.update(blogs_params)
     redirect_to blogs_path(@blog) ,notice: "ブログを編集しました！"
