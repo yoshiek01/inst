@@ -60,9 +60,17 @@ gem 'rails_admin'
 
 group :development do
   gem 'letter_opener_web'
-#  gem 'dotenv-rails'
+  gem 'dotenv-rails'
 end
 
 gem 'cancan'
 
 gem 'activeresource'
+
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+#SNSのプロフ画像を表示するためのuploader
+gem 'carrierwave'
+gem 'mini_magick'
