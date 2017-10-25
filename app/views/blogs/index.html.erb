@@ -9,9 +9,10 @@
 
       <% @blogs.each do |blog| %>
        <div class="row">
-        <h3><%= blog.user %></h3>
+        <h3><%= blog.user.name %></h3>
+        <h4><%= profile_img(blog.user) %></h4>
 
-        <h4><strong><%= blog.title %></strong></h4>
+        <h5><strong><%= blog.title %></strong></h5>
         <!-- strongは太字 -->
 
         <p><%= blog.content %></p>
