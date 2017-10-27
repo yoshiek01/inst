@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
   mount_uploader :avatar, AvatarUploader #deviseの設定配下に追記
   has_many :blogs
-  #userが複数のblogをもつ
+  has_many :pictures
+  #userが複数のblog,複数のpictureをもつ
 
   def self.create_unique_string
     SecureRandom.uuid

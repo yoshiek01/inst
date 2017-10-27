@@ -9,7 +9,6 @@
 
 <%= link_to "画像を投稿する", new_picture_path, class: 'btn btn-default' %>
 
-<div class="row">
 <table>
   <thead>
     <tr>
@@ -20,17 +19,18 @@
 
   <tbody>
     <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.date %></td>
-        <td><%= '　　　' %></td>
-        <td><%= link_to '詳細', picture, class: 'btn btn-default btn-sm btn-info' %></td>
-        <td><%= link_to '編集', edit_picture_path(picture), class: 'btn btn-default btn-sm btn-success' %></td>
-        <td><%= link_to '削除', picture, method: :delete, data: { confirm: '本当に削除していいですか？' },class: 'btn btn-default btn-sm btn btn-danger' %></td>
-      </tr>
+      <div class="row">
+        <h3><%= picture.date %></h3>
+        <h3><strong><%= picture.user.name %></strong></h3>
+        <h4><%= profile_img(picture.user) %></h4>
+        <h4><%= '　　　' %></h4>
+        <%= link_to '詳細', picture, class: 'btn btn-default btn-sm btn-info' %>
+        <%= link_to '編集', edit_picture_path(picture), class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to '削除', picture, method: :delete, data: { confirm: '本当に削除していいですか？' },class: 'btn btn-default btn-sm btn btn-danger' %>
+      </div>
     <% end %>
   </tbody>
 </table>
-</div>
 
-  </div>
+</div>
 </div>
