@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-    <h3>以下の内容で、送信する。</h3>
+    <h3>以下の内容で、投稿する。</h3>
     <%= form_for(@blog) do |f| %>
 
       <!-- `f.hidden_field`を使用して、リクエストパラメータに値を設定できるようにしています。 -->
@@ -10,7 +10,7 @@
       <!-- @blog.titleと@blog.contentとすることで、表示用の値を画面に出力しています。 -->
       <p>タイトル:<%= @blog.title %></p>
       <p>本文:<%= @blog.content %></p>
-      <%= f.submit "登録する",class: 'btn btn-primary btn-block' %>
+      <%= f.submit "投稿する",class: 'btn btn-primary btn-block' %>
       <!-- btn-primaryとは？-->
     <% end %>
 
