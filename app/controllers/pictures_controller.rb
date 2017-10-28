@@ -62,6 +62,12 @@ class PicturesController < ApplicationController
     end
   end
 
+  def confirm
+   @picture = Picture.new(pictures_params)
+   render :new if @picture.invalid?
+   #バリデーション
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_picture

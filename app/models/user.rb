@@ -8,12 +8,15 @@ class User < ActiveRecord::Base
   has_many :pictures
   #userが複数のblog,複数のpictureをもつ
 
+  validates :name, presence: true
+  #名前の空白を禁止
+
   def self.create_unique_string
     SecureRandom.uuid
   end
 
  #update_with_passwordをオーバーライドし
- #パスワードなしでもユーザ情報を更新できるようにする？
+ #パスワードなしでもユーザ情報を更新できるようにする
   def update_with_password(params, *options)
     if provider.blank?
       super
@@ -37,7 +40,7 @@ class User < ActiveRecord::Base
      )
 
      user.skip_confirmation!
-     user.save(validate: false)
+  #   user.save(validate: false)
    end
    user
  end
